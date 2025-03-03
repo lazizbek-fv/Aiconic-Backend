@@ -15,7 +15,7 @@ CORS(app)  # Enable CORS for all routes
 logging.basicConfig(level=logging.INFO)
 
 # Load model weights
-model_path = "/Users/lazizbekfayzullayev/Desktop/merged_realisticVision_VectorIllustration.safetensors"
+model_path = "model/merged_realisticVision_VectorIllustration.safetensors"
 logging.info(f"Loading model from {model_path}")
 
 # Initialize model
