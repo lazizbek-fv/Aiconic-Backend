@@ -27,7 +27,7 @@ logging.info("Model loaded and set to evaluation mode")
 
 # Initialize the pipeline
 pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2")
-pipe.to("cpu")  # Move to GPU if needed, e.g., .to("cuda")
+pipe.to("cuda")  # Move to GPU if needed, e.g., .to("cuda")
 
 @app.route('/predict', methods=['POST'])
 def predict():
