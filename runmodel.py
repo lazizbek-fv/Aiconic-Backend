@@ -27,7 +27,7 @@ logging.info("Model loaded and set to evaluation mode")
 
 # Initialize the pipeline
 pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2")
-pipe.to("cuda", torch.float16)  # Use FP16 for faster performance
+pipe.to("cpu")  # Use FP16 for faster performance
 
 @app.route('/predict', methods=['POST'])
 def predict():
